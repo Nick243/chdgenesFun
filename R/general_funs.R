@@ -1,3 +1,11 @@
+#' read_chdgenes
+#'
+#' @param my_path The full CHDGENES sample data inventory file as a semicolon delimited text file.
+#'
+#' @returns The full CHDGENES sample data inventory file as a R data.frame
+#' @export
+#'
+#' @examples
 read_chdgenes <- function(my_path){
   df <- vroom::vroom(my_path,
                      delim = ";", guess_max = 10000) |>
@@ -12,6 +20,14 @@ read_chdgenes <- function(my_path){
   return(df)
 }
 
+#' remove_relatives
+#'
+#' @param my_df A data.frame containing the a list of blind IDs. Often this will be the full CHDGENES sample inventory (e.g., aliquot level data).
+#'
+#' @returns A data.frame with specimens from only probands, mom (-01), and dad (-02). All relative samples will be removed.
+#' @export
+#'
+#' @examples
 remove_relatives <- function(my_df){
   df <- my_df |>
     tidyr::separate(blind_id, into = c("drop", "family_id", "member"), sep = "-", remove = F) |>
@@ -20,12 +36,28 @@ remove_relatives <- function(my_df){
   return(df)
 }
 
+#' remove_probands
+#'
+#' @param my_df A data.frame containing the a list of blind IDs. Often this will be the full CHDGENES sample inventory (e.g., aliquot level data).
+#'
+#' @returns A data.frame with all proband data removed.
+#' @export
+#'
+#' @examples
 remove_probands <- function(my_df){
   df <- my_df |>
     dplyr::filter(nchar(blind_id) != 7)
   return(df)
 }
 
+#' remove_decommissioned
+#'
+#' @param my_df A data.frame containing the a list of blind IDs. Often this will be the full CHDGENES sample inventory (e.g., aliquot level data).
+#'
+#' @returns A data.frame with all decommissioned samples removed.
+#' @export
+#'
+#' @examples
 remove_decommissioned <- function(my_df){
   df <- my_df |>
     dplyr::filter(nchar(blind_id) != 14) |>

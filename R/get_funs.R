@@ -1,4 +1,12 @@
 
+#' get_shipped_wgs
+#'
+#' @param my_df A data.frame containing the full CHDGENES sample inventory (e.g., aliquot level data).
+#'
+#' @returns A data.frame with columns as denoted by the function title.
+#' @export
+#'
+#' @examples
 get_shipped_wgs <- function(my_df){
   df <- my_df |>
     dplyr::arrange(blind_id, date_shipped) |>
@@ -11,6 +19,14 @@ get_shipped_wgs <- function(my_df){
   return(df)
 }
 
+#' get_shipped_wes
+#'
+#' @param my_df A data.frame containing the full CHDGENES sample inventory (e.g., aliquot level data).
+#'
+#' @returns A data.frame with columns as denoted by the function title.
+#' @export
+#'
+#' @examples
 get_shipped_wes <- function(my_df){
   df <- my_df |>
     dplyr::arrange(blind_id, date_shipped) |>
@@ -23,6 +39,14 @@ get_shipped_wes <- function(my_df){
   return(df)
 }
 
+#' get_shipped_array
+#'
+#' @param my_df A data.frame containing the full CHDGENES sample inventory (e.g., aliquot level data).
+#'
+#' @returns A data.frame with columns as denoted by the function title.
+#' @export
+#'
+#' @examples
 get_shipped_array<- function(my_df){
   df <- my_df |>
     dplyr::arrange(blind_id, date_shipped) |>
@@ -35,6 +59,14 @@ get_shipped_array<- function(my_df){
   return(df)
 }
 
+#' get_shipped_mips
+#'
+#' @param my_df A data.frame containing the full CHDGENES sample inventory (e.g., aliquot level data).
+#'
+#' @returns A data.frame with columns as denoted by the function title.
+#' @export
+#'
+#' @examples
 get_shipped_mips<- function(my_df){
   df <- my_df |>
     dplyr::arrange(blind_id, date_shipped) |>
@@ -47,6 +79,14 @@ get_shipped_mips<- function(my_df){
   return(df)
 }
 
+#' get_shipped_lrwgs
+#'
+#' @param my_df A data.frame containing the full CHDGENES sample inventory (e.g., aliquot level data).
+#'
+#' @returns A data.frame with columns as denoted by the function title.
+#' @export
+#'
+#' @examples
 get_shipped_lrwgs<- function(my_df){
   df <- my_df |>
     dplyr::arrange(blind_id, date_shipped) |>
@@ -59,8 +99,16 @@ get_shipped_lrwgs<- function(my_df){
   return(df)
 }
 
+#' get_total_avail_dna
+#'
+#' @param my_df A data.frame containing the full CHDGENES sample inventory (e.g., aliquot level data).
+#'
+#' @returns A data.frame with columns as denoted by the function title.
+#' @export
+#'
+#' @examples
 get_total_avail_dna <- function(my_df){
-  df <- my_df |> 
+  df <- my_df |>
     dplyr::filter(dna_qcstatus == "QC completed") |>
     dplyr::filter(status %in% c("In Circulation", "Reserved")) |>
     dplyr::group_by(blind_id) |>
@@ -69,20 +117,44 @@ get_total_avail_dna <- function(my_df){
   return(df)
 }
 
+#' get_source_type
+#'
+#' @param my_df A data.frame containing the full CHDGENES sample inventory (e.g., aliquot level data).
+#'
+#' @returns A data.frame with columns as denoted by the function title.
+#' @export
+#'
+#' @examples
 get_source_type <- function(my_df){
-  df <- my_df |> 
+  df <- my_df |>
     dplyr::distinct(blind_id, source_type) |>
     dplyr::group_by(blind_id) |>
     dplyr::summarise(dna_source = paste(source_type, collapse = "|"))
   return(df)
 }
 
+#' get_probands_only
+#'
+#' @param my_df A data.frame containing the a list of blind IDs. Often this will be the full CHDGENES sample inventory (e.g., aliquot level data).
+#'
+#' @returns A data.frame with columns as denoted by the function title.
+#' @export
+#'
+#' @examples
 get_probands_only <- function(my_df){
   df <- my_df |>
     dplyr::filter(nchar(blind_id) == 7)
   return(df)
 }
 
+#' get_in_trio
+#'
+#' @param my_df  A data.frame containing the a list of blind IDs. Often this will be the full CHDGENES sample inventory (e.g., aliquot level data).
+#'
+#' @returns A data.frame with columns as denoted by the function title.
+#' @export
+#'
+#' @examples
 get_in_trio <- function(my_df){
   df <- remove_relatives(my_df) |>
     add_family_id() |>
