@@ -115,6 +115,8 @@ add_shipped_lrwgs <- function(my_df, full_chdgenes){
 
 #' add_family_id
 #'
+#' Adds the five digit family ID to an existing data.frame
+#'
 #' @param my_df A data.frame containing the blinded IDs of interest
 #'
 #' @returns Additional column with the 5 digit family ID
