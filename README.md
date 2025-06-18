@@ -6,7 +6,18 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of chdgenesFun is to …
+This package provides a repository of commonly used functions to help
+parse and manipulate the CHDGENES biobank inventory file. **get()
+functions** (in general) are designed to be used on the full inventory
+file and return data.frames of interest by aggregating over the
+aliquot-level data. **add() functions** (in general) are designed to be
+used on proband centric data files where each row is a proband of
+interest (i.e., as obtained from HeartsMart) and return appended columns
+of interest. Several other commonly used helper functions are also
+included. Minimal documentation and instruction are provided for this
+package since its use is expected to be limited to our internal team.
+The functions (verbs) can be piped in succession to expedite complex
+queries and the generation of reports.
 
 ## Installation
 
@@ -20,33 +31,32 @@ pak::pak("Nick243/chdgenesFun")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This basic example highlights the core functionality of the chdgenesFun
+package:
 
 ``` r
+## Read in libraries
+library(tidyverse)
 library(chdgenesFun)
-## basic example code
+
+## Read in sample inventory
+chd_df <- read_chdgenes("/users/olljt2/desktop/CHDGENES_SampleData.txt")
+ 
+## Get listing of eligible trios for those sets with probands already shipped for WGS (but not parents)
+mydata <- chd_df %>%
+  remove_decommissioned() %>%
+  get_probands_only() %>%
+  get_shipped_wgs() %>%
+  add_family_id() %>%
+  add_in_trio(., chd_df) %>%
+  filter(in_biobank_trio == "Y") %>%
+  add_mom_wgs(., chd_df) %>%
+  add_mom_total_dna(., chd_df) %>%
+  add_dad_wgs(., chd_df) %>%
+  add_dad_total_dna(., chd_df) %>%
+  filter(is.na(mom_shipped_wgs) & is.na(dad_shipped_wgs)) %>%
+  filter(mom_total_avail_qcpass_dna >= 2 & dad_total_avail_qcpass_dna >= 2) %>%
+  select(-mom_wgs_ship_date, -mom_wgs_order_id, -dad_wgs_ship_date, -dad_wgs_order_id) %>%
+  mutate(mom_shipped_wgs = "N",
+         dad_shipped_wgs = "N")
 ```
-
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
