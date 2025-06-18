@@ -3,7 +3,7 @@ Title: Functions for Manipulating the CHDGENES SampleData (biobank) File
 Version: 0.0.1
 Authors@R: 
     person("Nicholas", "Ollberding", , "nicholas.ollberding@cchmc.org", role = c("aut", "cre"))
-Description: This package provides functions to help parse and manipulate the CHDGENES biobank inventory file. get() functions (in general) are designed to be used on the full inventory file. add() functions (in general) are designed to be used on proband centric files where each row is a proband of interest (often reflecting a clinical phenotype of interest and obtained from Heartsmart). 
+Description: Functions to parse and manipulate the CHDGENES biobank inventory file. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
