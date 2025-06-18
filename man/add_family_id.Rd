@@ -13,5 +13,5 @@ add_family_id(my_df)
 Additional column with the 5 digit family ID
 }
 \description{
-add_family_id
+Adds the five digit family ID to an existing data.frame
 }
