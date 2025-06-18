@@ -13,5 +13,5 @@ get_total_avail_dna(my_df)
 A data.frame with columns as denoted by the function title.
 }
 \description{
-get_total_avail_dna
+Generates a data.frame of blinded IDs and the total available (in circulation or reserve) QC pass DNA in ug for each.
 }

@@ -15,5 +15,5 @@ add_in_trio(my_df, full_chdgenes)
 Additional column denoting if the blinded ID is contained in a biobanking trio (e.g., at least one specimen was submitted for the proband and both parents).
 }
 \description{
-add_in_trio
+Adds a column to a data.frame denoting if the provided blinded IDs are part of a trio.
 }

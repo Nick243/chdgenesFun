@@ -13,5 +13,5 @@ get_shipped_lrwgs(my_df)
 A data.frame with columns as denoted by the function title.
 }
 \description{
-get_shipped_lrwgs
+Generates a data.frame of blinded IDs shipped for long read whole genome sequencing (PacBio or Oxford Nanopore)
 }

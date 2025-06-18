@@ -15,5 +15,5 @@ add_mom_wes(my_df, full_chdgenes)
 Additional columns as denoted by the function title.
 }
 \description{
-add_mom_wes
+Adds a column to a data.frame denoting if a maternal sample for a proband blinded ID has been shipped for exome sequencing
 }

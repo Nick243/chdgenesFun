@@ -1,5 +1,7 @@
 #' read_chdgenes
 #'
+#' Reads in the CHDGENES SampleData inventory file using vroom. The function expects the file as a semicolon delimited text file (e.g., CHDGENES_SampleData.txt)
+#'
 #' @param my_path The full CHDGENES sample data inventory file as a semicolon delimited text file.
 #'
 #' @returns The full CHDGENES sample data inventory file as a R data.frame
@@ -22,6 +24,8 @@ read_chdgenes <- function(my_path){
 
 #' remove_relatives
 #'
+#' Removes relatives from a data.frame (i.e, retains only proband, mom, and dad aggregate or aliquot data).
+#'
 #' @param my_df A data.frame containing the a list of blind IDs. Often this will be the full CHDGENES sample inventory (e.g., aliquot level data).
 #'
 #' @returns A data.frame with specimens from only probands, mom (-01), and dad (-02). All relative samples will be removed.
@@ -38,6 +42,8 @@ remove_relatives <- function(my_df){
 
 #' remove_probands
 #'
+#' Remove all probands from data.frame.
+#'
 #' @param my_df A data.frame containing the a list of blind IDs. Often this will be the full CHDGENES sample inventory (e.g., aliquot level data).
 #'
 #' @returns A data.frame with all proband data removed.
@@ -51,6 +57,8 @@ remove_probands <- function(my_df){
 }
 
 #' remove_decommissioned
+#'
+#' Remove decommissioned samples from data.frame. This should be the first function passed for most operations or queries.
 #'
 #' @param my_df A data.frame containing the a list of blind IDs. Often this will be the full CHDGENES sample inventory (e.g., aliquot level data).
 #'

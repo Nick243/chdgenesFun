@@ -15,5 +15,5 @@ add_shipped_array(my_df, full_chdgenes)
 Additional columns denoting if the blinded ID has been shipped for genotyping array, the date of shipment, and the external order ID number.
 }
 \description{
-add_shipped_array
+Adds a column to a data.frame denoting if a blinded ID has been shipped for genotyping array
 }

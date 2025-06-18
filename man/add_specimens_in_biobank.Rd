@@ -15,5 +15,5 @@ add_specimens_in_biobank(my_df, full_chdgenes)
 Additional column as denoting if at least one specimen was received by the biobank for the provided blinded IDs.
 }
 \description{
-add_specimens_in_biobank
+Adds a column to a data.frame denoting if the blinded ID has ever had a sample submitted to the biorepository
 }

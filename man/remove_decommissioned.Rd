@@ -13,5 +13,5 @@ remove_decommissioned(my_df)
 A data.frame with all decommissioned samples removed.
 }
 \description{
-remove_decommissioned
+Remove decommissioned samples from data.frame. This should be the first function passed for most operations or queries.
 }

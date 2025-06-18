@@ -13,5 +13,5 @@ read_chdgenes(my_path)
 The full CHDGENES sample data inventory file as a R data.frame
 }
 \description{
-read_chdgenes
+Reads in the CHDGENES SampleData inventory file using vroom. The function expects the file as a semicolon delimited text file (e.g., CHDGENES_SampleData.txt)
 }

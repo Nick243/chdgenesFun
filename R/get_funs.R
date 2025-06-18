@@ -1,6 +1,8 @@
 
 #' get_shipped_wgs
 #'
+#' Generates a data.frame of blinded IDs shipped for short read whole genome sequencing
+#'
 #' @param my_df A data.frame containing the full CHDGENES sample inventory (e.g., aliquot level data).
 #'
 #' @returns A data.frame with columns as denoted by the function title.
@@ -20,6 +22,8 @@ get_shipped_wgs <- function(my_df){
 }
 
 #' get_shipped_wes
+#'
+#' Generates a data.frame of blinded IDs shipped for exome sequencing
 #'
 #' @param my_df A data.frame containing the full CHDGENES sample inventory (e.g., aliquot level data).
 #'
@@ -41,6 +45,8 @@ get_shipped_wes <- function(my_df){
 
 #' get_shipped_array
 #'
+#'  Generates a data.frame of blinded IDs shipped for genotying array
+#'
 #' @param my_df A data.frame containing the full CHDGENES sample inventory (e.g., aliquot level data).
 #'
 #' @returns A data.frame with columns as denoted by the function title.
@@ -60,6 +66,8 @@ get_shipped_array<- function(my_df){
 }
 
 #' get_shipped_mips
+#'
+#'  Generates a data.frame of blinded IDs shipped for MIPs
 #'
 #' @param my_df A data.frame containing the full CHDGENES sample inventory (e.g., aliquot level data).
 #'
@@ -81,6 +89,8 @@ get_shipped_mips<- function(my_df){
 
 #' get_shipped_lrwgs
 #'
+#' Generates a data.frame of blinded IDs shipped for long read whole genome sequencing (PacBio or Oxford Nanopore)
+#'
 #' @param my_df A data.frame containing the full CHDGENES sample inventory (e.g., aliquot level data).
 #'
 #' @returns A data.frame with columns as denoted by the function title.
@@ -101,6 +111,8 @@ get_shipped_lrwgs<- function(my_df){
 
 #' get_total_avail_dna
 #'
+#' Generates a data.frame of blinded IDs and the total available (in circulation or reserve) QC pass DNA in ug for each.
+#'
 #' @param my_df A data.frame containing the full CHDGENES sample inventory (e.g., aliquot level data).
 #'
 #' @returns A data.frame with columns as denoted by the function title.
@@ -119,6 +131,8 @@ get_total_avail_dna <- function(my_df){
 
 #' get_source_type
 #'
+#'  Generates a data.frame of blinded IDs and the source type of the submitted specimens. If a blinded ID has multiple submission types they will be concatenated (e.g., wb|sal).
+#'
 #' @param my_df A data.frame containing the full CHDGENES sample inventory (e.g., aliquot level data).
 #'
 #' @returns A data.frame with columns as denoted by the function title.
@@ -135,6 +149,8 @@ get_source_type <- function(my_df){
 
 #' get_probands_only
 #'
+#' Removes non-proband blinded IDs from a data.frame
+#'
 #' @param my_df A data.frame containing the a list of blind IDs. Often this will be the full CHDGENES sample inventory (e.g., aliquot level data).
 #'
 #' @returns A data.frame with columns as denoted by the function title.
@@ -148,6 +164,8 @@ get_probands_only <- function(my_df){
 }
 
 #' get_in_trio
+#'
+#' Generates a data.frame of family IDs and a column denoting whether the ID is part of a complete trio (proband, mom, dad)
 #'
 #' @param my_df  A data.frame containing the a list of blind IDs. Often this will be the full CHDGENES sample inventory (e.g., aliquot level data).
 #'

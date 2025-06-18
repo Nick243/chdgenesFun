@@ -13,5 +13,5 @@ get_source_type(my_df)
 A data.frame with columns as denoted by the function title.
 }
 \description{
-get_source_type
+Generates a data.frame of blinded IDs and the source type of the submitted specimens. If a blinded ID has multiple submission types they will be concatenated (e.g., wb|sal).
 }

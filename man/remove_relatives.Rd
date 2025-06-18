@@ -13,5 +13,5 @@ remove_relatives(my_df)
 A data.frame with specimens from only probands, mom (-01), and dad (-02). All relative samples will be removed.
 }
 \description{
-remove_relatives
+Removes relatives from a data.frame (i.e, retains only proband, mom, and dad aggregate or aliquot data).
 }

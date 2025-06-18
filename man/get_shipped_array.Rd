@@ -13,5 +13,5 @@ get_shipped_array(my_df)
 A data.frame with columns as denoted by the function title.
 }
 \description{
-get_shipped_array
+Generates a data.frame of blinded IDs shipped for genotying array
 }

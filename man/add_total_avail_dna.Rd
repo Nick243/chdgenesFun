@@ -15,5 +15,5 @@ add_total_avail_dna(my_df, full_chdgenes)
 Additional column as denoted by the function title. This will add columns for all blind ID (proband or parent) passed to the function. Note this is only QC pass DNA that is listed as either in circulation or in reserve.
 }
 \description{
-add_total_avail_dna
+Adds a column to a data.frame denoting the total available QC pass DNA for all provided blinded IDs. Use this to get the total available proband DNA or the total DNA for trio IDs if in long form.
 }

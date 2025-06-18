@@ -15,5 +15,5 @@ add_dad_array(my_df, full_chdgenes)
 Additional columns as denoted by the function title.
 }
 \description{
-add_dad_array
+Adds a column to a data.frame denoting if a paternal sample for a proband blinded ID has been shipped for genotyping array
 }

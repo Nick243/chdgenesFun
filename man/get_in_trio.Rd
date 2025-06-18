@@ -13,5 +13,5 @@ get_in_trio(my_df)
 A data.frame with columns as denoted by the function title.
 }
 \description{
-get_in_trio
+Generates a data.frame of family IDs and a column denoting whether the ID is part of a complete trio (proband, mom, dad)
 }

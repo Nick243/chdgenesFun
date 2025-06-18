@@ -13,5 +13,5 @@ get_shipped_wes(my_df)
 A data.frame with columns as denoted by the function title.
 }
 \description{
-get_shipped_wes
+Generates a data.frame of blinded IDs shipped for exome sequencing
 }

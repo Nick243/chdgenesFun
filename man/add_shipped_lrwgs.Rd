@@ -15,5 +15,5 @@ add_shipped_lrwgs(my_df, full_chdgenes)
 Additional columns denoting if the blinded ID has been shipped for lrWGS, the date of shipment, and the external order ID number.
 }
 \description{
-add_shipped_lrwgs
+Adds a column to a data.frame denoting if a blinded ID has been shipped for long read whole genome sequencing
 }

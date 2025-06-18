@@ -13,5 +13,5 @@ get_probands_only(my_df)
 A data.frame with columns as denoted by the function title.
 }
 \description{
-get_probands_only
+Removes non-proband blinded IDs from a data.frame
 }

@@ -13,5 +13,5 @@ get_shipped_wgs(my_df)
 A data.frame with columns as denoted by the function title.
 }
 \description{
-get_shipped_wgs
+Generates a data.frame of blinded IDs shipped for short read whole genome sequencing
 }

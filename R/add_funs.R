@@ -1,5 +1,7 @@
 #' add_shipped_wgs
 #'
+#' Adds a column to a data.frame denoting if a blinded ID has been shipped for short read whole genome sequencing
+#'
 #' @param my_df A data.frame containing the blinded IDs of interest
 #' @param full_chdgenes A data.frame containing the full CHDGENES sample inventory
 #'
@@ -22,6 +24,8 @@ add_shipped_wgs <- function(my_df, full_chdgenes){
 }
 
 #' add_shipped_wes
+#'
+#' Adds a column to a data.frame denoting if a blinded ID has been shipped for exome sequencing
 #'
 #' @param my_df A data.frame containing the blinded IDs of interest
 #' @param full_chdgenes A data.frame containing the full CHDGENES sample inventory
@@ -46,6 +50,8 @@ add_shipped_wes <- function(my_df, full_chdgenes){
 
 #' add_shipped_array
 #'
+#' Adds a column to a data.frame denoting if a blinded ID has been shipped for genotyping array
+#'
 #' @param my_df A data.frame containing the blinded IDs of interest
 #' @param full_chdgenes A data.frame containing the full CHDGENES sample inventory
 #'
@@ -69,6 +75,8 @@ add_shipped_array <- function(my_df, full_chdgenes){
 
 #' add_shipped_mips
 #'
+#' Adds a column to a data.frame denoting if a blinded ID has been shipped for MIPs
+#'
 #' @param my_df A data.frame containing the blinded IDs of interest
 #' @param full_chdgenes A data.frame containing the full CHDGENES sample inventory
 #'
@@ -91,6 +99,8 @@ add_shipped_mips <- function(my_df, full_chdgenes){
 }
 
 #' add_shipped_lrwgs
+#'
+#' Adds a column to a data.frame denoting if a blinded ID has been shipped for long read whole genome sequencing
 #'
 #' @param my_df A data.frame containing the blinded IDs of interest
 #' @param full_chdgenes A data.frame containing the full CHDGENES sample inventory
@@ -131,6 +141,8 @@ add_family_id <- function(my_df){
 
 #' add_mom_wgs
 #'
+#' Adds a column to a data.frame denoting if a maternal sample for a proband blinded ID has been shipped for short read whole genome sequencing
+#'
 #' @param my_df A data.frame containing the blinded IDs of interest
 #' @param full_chdgenes A data.frame containing the full CHDGENES sample inventory
 #'
@@ -154,6 +166,8 @@ add_mom_wgs <- function(my_df, full_chdgenes){
 }
 
 #' add_mom_wes
+#'
+#' Adds a column to a data.frame denoting if a maternal sample for a proband blinded ID has been shipped for exome sequencing
 #'
 #' @param my_df A data.frame containing the blinded IDs of interest
 #' @param full_chdgenes A data.frame containing the full CHDGENES sample inventory
@@ -179,6 +193,8 @@ add_mom_wes <- function(my_df, full_chdgenes){
 
 #' add_dad_wgs
 #'
+#' Adds a column to a data.frame denoting if a paternal sample for a proband blinded ID has been shipped for short read whole genome sequencing
+#'
 #' @param my_df A data.frame containing the blinded IDs of interest
 #' @param full_chdgenes A data.frame containing the full CHDGENES sample inventory
 #'
@@ -202,6 +218,8 @@ add_dad_wgs <- function(my_df, full_chdgenes){
 }
 
 #' add_dad_wes
+#'
+#' Adds a column to a data.frame denoting if a paternal sample for a proband blinded ID has been shipped for exome sequencing
 #'
 #' @param my_df A data.frame containing the blinded IDs of interest
 #' @param full_chdgenes A data.frame containing the full CHDGENES sample inventory
@@ -227,6 +245,8 @@ add_dad_wes <- function(my_df, full_chdgenes){
 
 #' add_mom_array
 #'
+#' Adds a column to a data.frame denoting if a maternal sample for a proband blinded ID has been shipped for genotyping array
+#'
 #' @param my_df A data.frame containing the blinded IDs of interest
 #' @param full_chdgenes A data.frame containing the full CHDGENES sample inventory
 #'
@@ -250,6 +270,8 @@ add_mom_array <- function(my_df, full_chdgenes){
 }
 
 #' add_mom_mips
+#'
+#' Adds a column to a data.frame denoting if a maternal sample for a proband blinded ID has been shipped for MIPs
 #'
 #' @param my_df A data.frame containing the blinded IDs of interest
 #' @param full_chdgenes A data.frame containing the full CHDGENES sample inventory
@@ -275,6 +297,8 @@ add_mom_mips <- function(my_df, full_chdgenes){
 
 #' add_mom_lrwgs
 #'
+#' Adds a column to a data.frame denoting if a maternal sample for a proband blinded ID has been shipped for long read whole genome sequencing
+#'
 #' @param my_df A data.frame containing the blinded IDs of interest
 #' @param full_chdgenes A data.frame containing the full CHDGENES sample inventory
 #'
@@ -298,6 +322,8 @@ add_mom_lrwgs <- function(my_df, full_chdgenes){
 }
 
 #' add_dad_array
+#'
+#' Adds a column to a data.frame denoting if a paternal sample for a proband blinded ID has been shipped for genotyping array
 #'
 #' @param my_df A data.frame containing the blinded IDs of interest
 #' @param full_chdgenes A data.frame containing the full CHDGENES sample inventory
@@ -323,6 +349,8 @@ add_dad_array <- function(my_df, full_chdgenes){
 
 #' add_dad_mips
 #'
+#' Adds a column to a data.frame denoting if a paternal sample for a proband blinded ID has been shipped for MIPs
+#'
 #' @param my_df A data.frame containing the blinded IDs of interest
 #' @param full_chdgenes A data.frame containing the full CHDGENES sample inventory
 #'
@@ -346,6 +374,8 @@ add_dad_mips <- function(my_df, full_chdgenes){
 }
 
 #' add_dad_lrwgs
+#'
+#' Adds a column to a data.frame denoting if a paternal sample for a proband blinded ID has been shipped for long read whole genome sequencing
 #'
 #' @param my_df A data.frame containing the blinded IDs of interest
 #' @param full_chdgenes A data.frame containing the full CHDGENES sample inventory
@@ -371,6 +401,8 @@ add_dad_lrwgs <- function(my_df, full_chdgenes){
 
 #' add_mom_total_dna
 #'
+#' Adds a column to a data.frame denoting the total available QC pass DNA for the mother of a proband blinded ID
+#'
 #' @param my_df A data.frame containing the blinded IDs of interest
 #' @param full_chdgenes A data.frame containing the full CHDGENES sample inventory
 #'
@@ -392,6 +424,8 @@ add_mom_total_dna <- function(my_df, full_chdgenes){
 }
 
 #' add_dad_total_dna
+#'
+#' Adds a column to a data.frame denoting the total available QC pass DNA for the father of a proband blinded ID
 #'
 #' @param my_df A data.frame containing the blinded IDs of interest
 #' @param full_chdgenes A data.frame containing the full CHDGENES sample inventory
@@ -415,6 +449,8 @@ add_dad_total_dna <- function(my_df, full_chdgenes){
 
 #' add_total_avail_dna
 #'
+#' Adds a column to a data.frame denoting the total available QC pass DNA for all provided blinded IDs. Use this to get the total available proband DNA or the total DNA for trio IDs if in long form.
+#'
 #' @param my_df A data.frame containing the blinded IDs of interest
 #' @param full_chdgenes A data.frame containing the full CHDGENES sample inventory
 #'
@@ -435,6 +471,8 @@ add_total_avail_dna <- function(my_df, full_chdgenes){
 }
 
 #' add_in_trio
+#'
+#' Adds a column to a data.frame denoting if the provided blinded IDs are part of a trio.
 #'
 #' @param my_df A data.frame containing the blinded IDs of interest
 #' @param full_chdgenes A data.frame containing the full CHDGENES sample inventory
@@ -463,6 +501,8 @@ add_in_trio <- function(my_df, full_chdgenes){
 }
 
 #' add_specimens_in_biobank
+#'
+#' Adds a column to a data.frame denoting if the blinded ID has ever had a sample submitted to the biorepository
 #'
 #' @param my_df A data.frame containing the blinded IDs of interest
 #' @param full_chdgenes A data.frame containing the full CHDGENES sample inventory

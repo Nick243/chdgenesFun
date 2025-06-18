@@ -13,5 +13,5 @@ remove_probands(my_df)
 A data.frame with all proband data removed.
 }
 \description{
-remove_probands
+Remove all probands from data.frame.
 }

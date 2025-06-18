@@ -15,5 +15,5 @@ add_dad_total_dna(my_df, full_chdgenes)
 Additional column as denoted by the function title. Note this is only QC pass DNA that is listed as either in circulation or in reserve.
 }
 \description{
-add_dad_total_dna
+Adds a column to a data.frame denoting the total available QC pass DNA for the father of a proband blinded ID
 }
